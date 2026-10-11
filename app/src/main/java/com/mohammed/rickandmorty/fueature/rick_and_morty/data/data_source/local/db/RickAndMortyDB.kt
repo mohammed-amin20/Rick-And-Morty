@@ -2,19 +2,22 @@ package com.mohammed.rickandmorty.fueature.rick_and_morty.data.data_source.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.mohammed.rickandmorty.fueature.rick_and_morty.data.data_source.local.db.dao.CharacterDao
 import com.mohammed.rickandmorty.fueature.rick_and_morty.data.data_source.local.db.entity.Character
 
 @Database(
     entities = [Character::class],
-    version = RickAndMortyDB.DB_VERSION
+    version = RickAndMortyDB.DB_VERSION,
+    exportSchema = false
 )
+@TypeConverters(Converters::class)
 abstract class RickAndMortyDB : RoomDatabase(){
 
     abstract val characterDao : CharacterDao
 
     companion object{
         const val DB_NAME = "RickAndMorty"
-        const val DB_VERSION = 1
+        const val DB_VERSION = 2
     }
 }

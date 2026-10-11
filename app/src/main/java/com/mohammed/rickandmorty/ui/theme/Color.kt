@@ -2,10 +2,24 @@ package com.mohammed.rickandmorty.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// Surfaces
+val RamBackground = Color(0xFF272B33)
+val RamSurface = Color(0xFF3C3E44)
+val RamSurfaceElevated = Color(0xFF45484E)
+val RamScrim = Color(0xCC1B1E24)
+val RamOutline = Color(0xFF4F545C)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+// Portal accents
+val PortalBlue = Color(0xFF00B5CC)
+val PortalGreen = Color(0xFF97CE4C)
+val PortalGlow = Color(0xFFB2DF28)
+
+// Text
+val RamTextPrimary = Color(0xFFF5F5F5)
+val RamTextSecondary = Color(0xFF9E9E9E)
+val RamOnAccent = Color(0xFF05262B)
+
+// Status
+val StatusAlive = Color(0xFF55CC44)
+val StatusDead = Color(0xFFD63D2E)
+val StatusUnknown = Color(0xFF9E9E9E)

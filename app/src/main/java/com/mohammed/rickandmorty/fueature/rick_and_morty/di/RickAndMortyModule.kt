@@ -43,7 +43,7 @@ object RickAndMortyModule {
             app,
             RickAndMortyDB::class.java,
             RickAndMortyDB.DB_NAME
-        ).build()
+        ).fallbackToDestructiveMigration(dropAllTables = true).build()
     }
 
     @Provides

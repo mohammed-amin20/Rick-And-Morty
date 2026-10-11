@@ -11,6 +11,9 @@ interface CharacterDao {
     @Query("Select * from Character Where name LIKE '%'||:name||'%' AND page = :page")
     suspend fun getCharactersByName(name : String, page: Int) : List<Character>
 
+    @Query("Select * from Character Where id = :id")
+    suspend fun getCharacterById(id: Int) : Character?
+
     @Upsert
     suspend fun upsertCharacter(character : Character )
 }
