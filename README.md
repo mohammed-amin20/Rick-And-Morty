@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/screenshots/portal-logo.svg" width="92" alt="Rick & Morty portal logo" />
+
 # 🛸 Rick & Morty — Android
 
 ### Explore the multiverse — a modern Android showcase built with Jetpack Compose, Clean Architecture & MVI
@@ -16,7 +18,8 @@
 
 A sleek Android client for [**The Rick and Morty API**](https://rickandmortyapi.com), featuring a
 cinematic character list, shared-element navigation into a rich detail screen, offline caching,
-and a handcrafted Rick & Morty–inspired design system in both light **and** dark mode.
+and a handcrafted Rick & Morty–inspired design system — portal branding on the launcher, splash and
+header, kawaii chibi mascots, and playful in-character copy — in both light **and** dark mode.
 
 </div>
 
@@ -48,7 +51,8 @@ and a handcrafted Rick & Morty–inspired design system in both light **and** da
 | 🔎 **Debounced search** | Live search across the multiverse with a 450 ms debounce and instant clear. |
 | 🪄 **Shared-element morph** | The image and name smoothly morph from card → hero as you navigate to the detail screen. |
 | 🧬 **Rich detail** | Status/species chips plus Profile, Origin, Location and Appearances (episode) sections. |
-| 💀 **Graceful states** | Shimmer skeletons, an animated portal loader, and empty/error states with retry. |
+| 💀 **Graceful states** | Shimmer skeletons, a spinning portal loader with bobbing chibi Morty, and chibi-filled empty/error states with retry and playful character copy. |
+| 🪐 **Portal branding** | Custom adaptive launcher icon, splash screen and in-app header logo drawn from the portal ring + core. |
 | 💾 **Offline cache** | Room-backed cache with network-first strategy and transparent fallback. |
 | 🌗 **Light & dark** | Full Rick & Morty palette for both themes, following the system setting. |
 | 🏛️ **Clean + MVI** | Clear layer separation with a unidirectional `Action → State` flow. |
@@ -58,15 +62,31 @@ and a handcrafted Rick & Morty–inspired design system in both light **and** da
 
 ## 📸 Screenshots
 
-> Add your captures to [`docs/screenshots/`](docs/screenshots) using the file names below — they'll render automatically.
+<div align="center">
 
-| List · Light | List · Dark |
-| :---: | :---: |
-| ![Character list light](docs/screenshots/list-light.png) | ![Character list dark](docs/screenshots/list-dark.png) |
+<img src="docs/screenshots/portal-logo.svg" width="56" alt="Portal logo" title="Wubba lubba dub dub!" />
 
-| Detail · Light | Detail · Dark |
-| :---: | :---: |
-| ![Character detail light](docs/screenshots/detail-light.png) | ![Character detail dark](docs/screenshots/detail-dark.png) |
+**A ticket across the multiverse** — every screen, in light & dark.
+
+</div>
+
+| Screen | ☀️ Light | 🌙 Dark |
+| :--- | :---: | :---: |
+| **Home** | <img src="docs/screenshots/home-light.jpeg" width="150" alt="Home · light" /> | <img src="docs/screenshots/home-dark.jpeg" width="150" alt="Home · dark" /> |
+| **Search** | <img src="docs/screenshots/search-light.jpeg" width="150" alt="Search · light" /> | <img src="docs/screenshots/search-dark.jpeg" width="150" alt="Search · dark" /> |
+| **Loading** | <img src="docs/screenshots/loading-light.jpeg" width="150" alt="Loading · light" /> | <img src="docs/screenshots/loading-dark.jpeg" width="150" alt="Loading · dark" /> |
+| **Details** | <img src="docs/screenshots/detailes-light.jpeg" width="150" alt="Details · light" /> | <img src="docs/screenshots/detailes-dark.jpeg" width="150" alt="Details · dark" /> |
+| **Not found** | <img src="docs/screenshots/failed-notfound-light.jpeg" width="150" alt="Not found · light" /> | <img src="docs/screenshots/failed-notfound-dark.jpeg" width="150" alt="Not found · dark" /> |
+
+<div align="center">
+
+#### 🚪 Splash
+
+<img src="docs/screenshots/splash.jpeg" width="200" alt="Splash screen" />
+
+</div>
+
+> All captures live in [`docs/screenshots/`](docs/screenshots).
 
 ---
 
@@ -180,7 +200,7 @@ app/src
         │   └── util/ (Error.kt, Result.kt)
         ├── di/RickAndMortyModule.kt
         └── presentation
-            ├── components/                               # CharacterCard, Chips, LoadingPortal, …
+            ├── components/                               # CharacterCard, Chips, LoadingPortal, Mascot, …
             ├── detail/                                   # Character detail (Screen · State · Action · VM)
             ├── list/                                     # Character list (Screen · State · Action · VM)
             └── navigation/                               # Type-safe Routes + NavHost
@@ -207,6 +227,26 @@ A Rick & Morty–inspired palette that adapts to light and dark.
 
 Bold, tight typography (`displaySmall`, `headlineSmall`, …) and rounded, expressive shapes are defined
 in `ui/theme/Type.kt` and `ui/theme/Shape.kt`.
+
+### 🪐 Branding & Mascots
+
+The **portal ring + core** (`ic_launcher_foreground`) doubles as the adaptive launcher icon, the splash
+screen background (`splash_background`) and the in-app header logo — a full-bleed brand across
+onboarding, launcher and app.
+
+Hand-drawn kawaii chibi mascots in `res/drawable` fill the app's non-content moments:
+
+| Mascot | Drawable | Where |
+| :---: | :--- | :--- |
+| Morty 😊 | `ic_chibi_morty` | Bobbing happily inside the spinning loading portal |
+| Morty 😲 | `ic_chibi_morty_wow` | Empty state — "Nobody's home, Morty" |
+| Rick 😏 | `ic_chibi_rick` | Error state — "Aw jeez… something broke." |
+
+They're driven by the reusable `Mascot()` composable (`presentation/components/Mascot.kt`) — an idle
+bob animation plus a soft radial `PortalGreen → PortalBlue → transparent` glow. Loading/empty/error
+are all vector-drawn (zero image assets), and errors resolve to in-character copy via
+`Error.toDisplayMessage()` — e.g. *"No portal signal. Check your internet and try again, Morty."* or
+*"The Citadel's servers are having a rough day. Try again shortly."*
 
 ---
 
@@ -262,6 +302,7 @@ dark mode.
 - [ ] Search filters (status, species, gender)
 - [ ] Episodes & locations browsing tabs
 - [ ] UI snapshot tests for the preview states
+- [ ] Animated splash with a portal-birth entrance animation
 - [ ] Downloadable Rick & Morty font
 
 ---

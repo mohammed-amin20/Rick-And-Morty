@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="216" height="216" viewBox="0 0 108 108">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0"   stop-color="#B2DF28" stop-opacity="0.40"/>
+      <stop offset="0.55" stop-color="#97CE4C" stop-opacity="0.20"/>
+      <stop offset="1"   stop-color="#00B5CC" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ring" cx="50%" cy="50%" r="50%">
+      <stop offset="0"   stop-color="#B2DF28"/>
+      <stop offset="0.70" stop-color="#B2DF28"/>
+      <stop offset="0.85" stop-color="#97CE4C"/>
+      <stop offset="1"   stop-color="#00B5CC"/>
+    </radialGradient>
+    <linearGradient id="arm" x1="54" y1="33" x2="55.5" y2="52.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B2DF28"/>
+      <stop offset="1" stop-color="#00B5CC"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0"   stop-color="#FFFFFF" stop-opacity="0.90"/>
+      <stop offset="0.35" stop-color="#B2DF28" stop-opacity="0.70"/>
+      <stop offset="1"   stop-color="#B2DF28" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <path fill="url(#halo)" d="M22,54 a32,32 0 1,0 64,0 a32,32 0 1,0 -64,0 Z"/>
+  <path fill="url(#ring)" fill-rule="evenodd"
+        d="M24,54 a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0 Z M33,54 a21,21 0 1,0 42,0 a21,21 0 1,0 -42,0 Z"/>
+  <path fill="none" stroke="url(#arm)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"
+        d="M54,33 C 66,34 71,44 69,54 C 67,63 60,64.5 55,61.5 C 51,59 51.5,53.5 55.5,52.5"/>
+  <path fill="none" stroke="url(#arm)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"
+        transform="rotate(120 54 54)"
+        d="M54,33 C 66,34 71,44 69,54 C 67,63 60,64.5 55,61.5 C 51,59 51.5,53.5 55.5,52.5"/>
+  <path fill="none" stroke="url(#arm)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"
+        transform="rotate(240 54 54)"
+        d="M54,33 C 66,34 71,44 69,54 C 67,63 60,64.5 55,61.5 C 51,59 51.5,53.5 55.5,52.5"/>
+  <path fill="url(#core)" d="M46,54 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 Z"/>
+  <path fill="#EAFB9A" d="M50.5,54 a3.5,3.5 0 1,0 7,0 a3.5,3.5 0 1,0 -7,0 Z"/>
+  <path fill="#FFFFFF" d="M52.6,54 a1.4,1.4 0 1,0 2.8,0 a1.4,1.4 0 1,0 -2.8,0 Z"/>
+</svg>

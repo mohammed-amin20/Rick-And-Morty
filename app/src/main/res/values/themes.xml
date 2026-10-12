@@ -2,7 +2,7 @@
 <resources>
 
     <style name="Theme.RickAndMorty" parent="android:Theme.Material.NoActionBar">
-        <item name="android:windowBackground">@color/ram_background</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
         <item name="android:statusBarColor">@color/ram_background</item>
         <item name="android:navigationBarColor">@color/ram_background</item>
     </style>

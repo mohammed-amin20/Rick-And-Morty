@@ -1,0 +1,57 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- head -->
+    <path
+        android:fillColor="#FFF2C9A0"
+        android:pathData="M18,48 a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0 Z" />
+
+    <!-- spiky hair (symmetric) -->
+    <path
+        android:fillColor="#FFA9DCEA"
+        android:pathData="M18,46 L24,17 L32,34 L39,14 L46,33 L48,16 L50,33 L57,14 L64,34 L72,17 L78,46 C72,42 62,41 52,41 C44,41 38,42 30,43 C24,43.8 20,44.4 18,46 Z" />
+
+    <!-- unibrow -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M30,47 L66,47"
+        android:strokeColor="#FFA9DCEA"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round" />
+
+    <!-- eyes -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M30.5,57 a7.5,8.5 0 1,0 15,0 a7.5,8.5 0 1,0 -15,0 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M50.5,57 a7.5,8.5 0 1,0 15,0 a7.5,8.5 0 1,0 -15,0 Z" />
+    <path
+        android:fillColor="#FF1C1C1C"
+        android:pathData="M35,58 a3.8,3.8 0 1,0 7.6,0 a3.8,3.8 0 1,0 -7.6,0 Z" />
+    <path
+        android:fillColor="#FF1C1C1C"
+        android:pathData="M53.4,58 a3.8,3.8 0 1,0 7.6,0 a3.8,3.8 0 1,0 -7.6,0 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M36.3,54.6 a1.7,1.7 0 1,0 3.4,0 a1.7,1.7 0 1,0 -3.4,0 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M56.3,54.6 a1.7,1.7 0 1,0 3.4,0 a1.7,1.7 0 1,0 -3.4,0 Z" />
+
+    <!-- smirk -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M40,70 C46,75 52,74 57,69"
+        android:strokeColor="#FF8A5A3A"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round" />
+
+    <!-- drool -->
+    <path
+        android:fillColor="#CCBFE6F0"
+        android:pathData="M37.5,71.5 C37.5,75 39.5,77.5 41.3,75.8 C43.1,74.1 40.5,70.8 37.5,71.5 Z" />
+</vector>

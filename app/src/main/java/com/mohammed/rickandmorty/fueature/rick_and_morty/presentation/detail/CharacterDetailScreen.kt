@@ -230,7 +230,7 @@ private fun DetailBody(
                     .height(200.dp),
                 contentAlignment = Alignment.Center
             ) {
-                LoadingPortal()
+                LoadingPortal(caption = "Jumping dimensions…")
             }
 
             state.error != null && character == null -> ErrorState(

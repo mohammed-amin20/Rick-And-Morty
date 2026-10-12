@@ -12,7 +12,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -26,7 +29,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.mohammed.rickandmorty.R
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mohammed.rickandmorty.fueature.rick_and_morty.data.data_source.local.db.entity.Character
@@ -114,8 +119,8 @@ fun CharacterListContent(
                     )
 
                     state.characters.isEmpty() -> EmptyState(
-                        title = "No characters found",
-                        message = "The multiverse came up empty. Try a different name.",
+                        title = "Nobody's home, Morty",
+                        message = "Your search didn't turn up anyone in the multiverse. Try another name.",
                         modifier = Modifier.fillMaxSize()
                     )
 
@@ -147,7 +152,7 @@ fun CharacterListContent(
                                         .padding(vertical = 12.dp),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    LoadingPortal(size = 40.dp)
+                                    LoadingPortal(size = 40.dp, showMascot = false)
                                 }
                             }
                         }
@@ -197,17 +202,28 @@ private fun SharedCharacterCard(
 
 @Composable
 private fun Header() {
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Text(
-            text = "Rick & Morty",
-            style = MaterialTheme.typography.displaySmall,
-            color = MaterialTheme.colorScheme.onBackground
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Image(
+            painter = painterResource(R.drawable.ic_launcher_foreground),
+            contentDescription = "Rick and Morty logo",
+            modifier = Modifier.size(56.dp)
         )
-        Text(
-            text = "Explore the multiverse",
-            style = MaterialTheme.typography.bodyLarge,
-            color = PortalGreen
-        )
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(
+                text = "Rick & Morty",
+                style = MaterialTheme.typography.displaySmall,
+                color = MaterialTheme.colorScheme.onBackground
+            )
+            Text(
+                text = "Explore the multiverse",
+                style = MaterialTheme.typography.bodyLarge,
+                color = PortalGreen
+            )
+        }
     }
 }
 
