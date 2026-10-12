@@ -317,7 +317,7 @@ MIT License · Copyright (c) 2026 mohammed-amin20
 
 <div align="center">
 
-**Mohammed Amin** — [@mohammed-amin20](https://github.com/mohammed-amin20)
+**Mohammed Amen** — [@mohammed-amin20](https://github.com/mohammed-amin20)
 
 Made with 🛸 & ☕ — powered by [The Rick and Morty API](https://rickandmortyapi.com)
 
