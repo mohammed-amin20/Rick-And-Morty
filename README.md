@@ -68,23 +68,19 @@ header, kawaii chibi mascots, and playful in-character copy — in both light **
 
 **A ticket across the multiverse** — every screen, in light & dark.
 
+#### 🚪 Splash
+
+<img src="docs/screenshots/splash.jpeg" width="45%" alt="Splash screen" />
+
 </div>
 
 | Screen | ☀️ Light | 🌙 Dark |
 | :--- | :---: | :---: |
-| **Home** | <img src="docs/screenshots/home-light.jpeg" width="150" alt="Home · light" /> | <img src="docs/screenshots/home-dark.jpeg" width="150" alt="Home · dark" /> |
-| **Search** | <img src="docs/screenshots/search-light.jpeg" width="150" alt="Search · light" /> | <img src="docs/screenshots/search-dark.jpeg" width="150" alt="Search · dark" /> |
-| **Loading** | <img src="docs/screenshots/loading-light.jpeg" width="150" alt="Loading · light" /> | <img src="docs/screenshots/loading-dark.jpeg" width="150" alt="Loading · dark" /> |
-| **Details** | <img src="docs/screenshots/detailes-light.jpeg" width="150" alt="Details · light" /> | <img src="docs/screenshots/detailes-dark.jpeg" width="150" alt="Details · dark" /> |
-| **Not found** | <img src="docs/screenshots/failed-notfound-light.jpeg" width="150" alt="Not found · light" /> | <img src="docs/screenshots/failed-notfound-dark.jpeg" width="150" alt="Not found · dark" /> |
-
-<div align="center">
-
-#### 🚪 Splash
-
-<img src="docs/screenshots/splash.jpeg" width="200" alt="Splash screen" />
-
-</div>
+| **Home** | <img src="docs/screenshots/home-light.jpeg" width="60%" alt="Home · light" /> | <img src="docs/screenshots/home-dark.jpeg" width="60%" alt="Home · dark" /> |
+| **Search** | <img src="docs/screenshots/search-light.jpeg" width="60%" alt="Search · light" /> | <img src="docs/screenshots/search-dark.jpeg" width="60%" alt="Search · dark" /> |
+| **Loading** | <img src="docs/screenshots/loading-light.jpeg" width="60%" alt="Loading · light" /> | <img src="docs/screenshots/loading-dark.jpeg" width="60%" alt="Loading · dark" /> |
+| **Details** | <img src="docs/screenshots/detailes-light.jpeg" width="60%" alt="Details · light" /> | <img src="docs/screenshots/detailes-dark.jpeg" width="60%" alt="Details · dark" /> |
+| **Not found** | <img src="docs/screenshots/failed-notfound-light.jpeg" width="60%" alt="Not found · light" /> | <img src="docs/screenshots/failed-notfound-dark.jpeg" width="60%" alt="Not found · dark" /> |
 
 > All captures live in [`docs/screenshots/`](docs/screenshots).
 
